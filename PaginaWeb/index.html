@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Cuadro de Texto y Botón</title>
+    <style>
+        body {
+            background-color: #000; /* Código Hex para negro */
+            color: #fff; /* Color del texto (opcional) */
+        }
+        .cuadro-texto {
+            width: 300px;
+            margin: 0 auto;
+            padding: 450px;
+            border: 2px solid #000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadro-texto">
+        <input type="text" id="texto-ingresado" placeholder="Escribe aquí">
+        <button onclick="redireccionar()">Enviar</button>
+    </div>
+
+    <script>
+        function redireccionar() {
+            const textoIngresado = document.getElementById('texto-ingresado').value;
+            if (textoIngresado === 'Necesitas un buen oido') {
+                window.location.href = 'pagina2.html'; // Cambia la URL deseada
+            } else {
+                alert('Texto incorrecto. Inténtalo de nuevo.');
+            }
+        }
+    </script>
+</body>
+</html>
